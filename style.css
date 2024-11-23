@@ -1,0 +1,170 @@
+@import url("../fonts/roboto.css");
+
+:root{
+    --size: 25vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-image: url(images/bg.jpg);
+}
+
+/* .onlyGameContainer {
+    height: 100%;
+    background-color: #11213a;
+} */
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, var(--size));
+    grid-template-rows: repeat(3, var(--size));
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    position: relative;
+}
+
+.cell {
+    height: var(--size);
+    width: var(--size);
+    border: 6px solid white;
+    color: white;
+    font-size: 20vh;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: none;
+    border-left: none;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+#cell1,
+#cell2,
+#cell3 {
+    border-top: none;
+}
+
+#cell3,
+#cell6,
+#cell9 {
+    border-right: none;
+}
+
+.header {
+    background-color: whitesmoke;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    font-size: 15vh;
+}
+
+.replay-icon {
+    height: 7vh;
+    cursor: pointer;
+}
+
+#turn {
+    margin-left: 2vw;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes lineAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes lineAnimationCol {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes lineAnimationDia {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 135%;
+    }
+}
+
+#line {
+    visibility: hidden;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    border-radius: 23px;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 981px) {
+    :root {
+        --size: 20vh
+    }
+    .cell {
+        font-size: 18vh;
+    }
+    .container {
+        background: none;
+    }
+    .cell {
+        border-color: black;
+        color: black;
+    }
+    #line {
+        background-color: black;
+    }
+    .header {
+        font-size: 30vh;
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 684px) {
+    :root {
+        --size: 15vh
+    }
+    .cell {
+        font-size: 14vh;
+    }
+    .game {
+        margin-top: 17vh;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    :root {
+        --size: 13vh
+    }
+    .cell {
+        font-size: 12vh;
+    }
+}
+@media only screen and (max-width: 292px) {
+    :root {
+        --size: 12vh
+    }
+    .cell {
+        font-size: 12vh;
+    }
+}

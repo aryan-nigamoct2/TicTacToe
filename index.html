@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tic Tac Toe Game</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="utils.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="header flex">
+        <img src="images/replay-icon.svg" class="replay-icon non-selectable" id="reset">
+        <span id="turn">X turn</span>
+    </div>
+    <div class="container flex">
+        <div class="game non-selectable">
+            <div id="line"></div>
+            <div class="cell flex hover" id="cell1"></div>
+            <div class="cell flex hover" id="cell2"></div>
+            <div class="cell flex hover" id="cell3"></div>
+            <div class="cell flex hover" id="cell4"></div>
+            <div class="cell flex hover" id="cell5"></div>
+            <div class="cell flex hover" id="cell6"></div>
+            <div class="cell flex hover" id="cell7"></div>
+            <div class="cell flex hover" id="cell8"></div>
+            <div class="cell flex hover" id="cell9"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
